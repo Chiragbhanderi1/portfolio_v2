@@ -13,13 +13,13 @@ const Contact = () => {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     const firebaseConfig = {
-      apiKey: "AIzaSyDOx6iDHFQoJCmooTzO7oRHBWBlfzml4rk",
-      authDomain: "portfolio-v2-9aa54.firebaseapp.com",
-      projectId: "portfolio-v2-9aa54",
-      storageBucket: "portfolio-v2-9aa54.appspot.com",
-      messagingSenderId: "364225130453",
-      appId: "1:364225130453:web:8385daf152024e7b65175c",
-      measurementId: "G-T7NS35FFJD",
+      apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+      authDomain: process.env.REACT_APP_AUTHDOMAIN,
+      projectId: process.env.REACT_APP_PROJECTID,
+      storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+      messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+      appId: process.env.REACT_APP_FIREBASEAPPID,
+      measurementId: process.env.REACT_APP_MESUREMENTID,
     };
 
     const app = initializeApp(firebaseConfig);
@@ -318,3 +318,5 @@ const Contact = () => {
 };
 
 export default Contact;
+
+
