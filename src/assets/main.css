@@ -1,0 +1,285 @@
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden !important;
+    background-color: #0E0425;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.color {
+    color: #64ffda !important;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.fadecolor {
+    color: #8892b0;
+}
+
+header {
+    max-width: 100vw;
+    padding: 15px 50px;
+    display: flex;
+    z-index: 55;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+}
+
+header .logo {
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    background: transparent;
+    background-blend-mode: color-burn;
+}
+
+header ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 5px;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 15px 15px;
+    color: #fff;
+    border-radius: 25px;
+    transition: all 0.3s linear;
+}
+
+header ul li a:hover .numbers,
+header ul li a:hover,
+header ul li a.active,
+header ul li a i.active {
+    background: #64ffda;
+    color: #0a192f !important;
+}
+
+#hero {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background-image: url("../assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.hero-card {
+    padding: 2rem;
+    border-radius: 1rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(35px);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: fadeing_in linear forwards;
+    animation-timeline: view();
+    animation-range: exit -400px;
+}
+
+@keyframes fadeing_in {
+    to {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.numbers {
+    color: #64ffda !important;
+}
+
+.btn {
+    padding: 1rem 0;
+    margin-left: 10px;
+    font-weight: 700;
+    background: rgb(255, 255, 255);
+    color: blueviolet;
+    border-radius: .5rem;
+    border-bottom: 2px solid blueviolet;
+    border-right: 2px solid blueviolet;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    transition-duration: 1s;
+    transition-property: border-top,
+        border-left,
+        border-bottom,
+        border-right,
+        box-shadow;
+}
+
+.btn a {
+    margin: 1rem 2rem;
+}
+
+.btn:hover {
+    border-top: 2px solid blueviolet;
+    border-left: 2px solid blueviolet;
+    border-bottom: 2px solid rgb(238, 103, 238);
+    border-right: 2px solid rgb(238, 103, 238);
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+}
+
+.name {
+    color: #55128d;
+    font-size: 60px;
+}
+
+.jobtitle {
+    color: #a018d1;
+    font-size: 55px;
+}
+
+@media screen and (max-width:768px) {
+    header {
+        padding: 15px 30px;
+    }
+    header ul li a:hover .numbers,
+    header ul li a:hover,
+    header ul li a.active,
+    header ul li a i.active {
+        background: transparent;
+        color: #fff !important;
+    }
+
+    header ul {
+        height: 100vh;
+        position: fixed;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100vw;
+        transform: translateX(100%);
+        z-index: 500;
+        background-color: #0E0425;
+        transition: transform 0.5s ease-in;
+    }
+
+    header.open ul {
+        transform: translateX(0%);
+        width: 100vw;
+    }
+
+    header ul li {
+        margin: 0rem 1rem !important;
+        border-bottom: 1px solid white;
+        padding: 1.2rem 0.5rem;
+        border-radius: 0;
+    }
+
+    header ul li:first-child,
+    header ul li:last-child {
+        border-bottom: none !important;
+    }
+    .header-btn{
+        margin-top: 10px;
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width:726px) {
+    .name {
+        font-size: 30px;
+    }
+
+    .jobtitle {
+        font-size: 25px;
+    }
+
+    .scroll-product-card {
+        scale: 0.5;
+    }
+}
+
+@media (min-width:726px) and (max-width:1024px) {
+
+    header {
+        padding: 10px 30px;
+    }
+
+    header ul li {
+        list-style: none;
+        margin-left: 2px;
+    }
+
+    header ul li a {
+        padding: 10px 10px;
+    }
+
+    .btn {
+        padding: 0.5rem 0;
+        margin-left: 10px;
+    }
+
+    .btn a {
+        margin: 0.5rem 1rem;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .jobtitle {
+        font-size: 35px;
+    }
+
+    .scroll-product-card {
+        scale: 0.8;
+    }
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../assets/starss.png');
+    animation: shooting-stars 50s linear infinite;
+    filter: blur(2px);
+    z-index: -1;
+    /* Ensure the stars are behind the text */
+}
+
+@keyframes shooting-stars {
+    0% {
+        background-position: bottom;
+    }
+
+    100% {
+        background-position: top;
+    }
+}
