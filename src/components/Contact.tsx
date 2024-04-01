@@ -13,38 +13,37 @@ const Contact = () => {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
     const firebaseConfig = {
-      apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-      authDomain: process.env.REACT_APP_AUTHDOMAIN,
-      projectId: process.env.REACT_APP_PROJECTID,
-      storageBucket: process.env.REACT_APP_STORAGEBUCKET,
-      messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
-      appId: process.env.REACT_APP_FIREBASEAPPID,
-      measurementId: process.env.REACT_APP_MESUREMENTID,
+      apiKey: "AIzaSyDOx6iDHFQoJCmooTzO7oRHBWBlfzml4rk",
+      authDomain: "portfolio-v2-9aa54.firebaseapp.com",
+      projectId: "portfolio-v2-9aa54",
+      storageBucket: "portfolio-v2-9aa54.appspot.com",
+      messagingSenderId: "364225130453",
+      appId: "1:364225130453:web:8385daf152024e7b65175c",
+      measurementId: "G-T7NS35FFJD",
     };
 
     const app = initializeApp(firebaseConfig);
     const firestore = getFirestore(app);
 
+     
     // Function to add a message to Firestore
     const addMessageToFirestore = async (messageData:any) => {
       try {
         const docRef = await addDoc(
           collection(firestore, "messages"),
           messageData
-        );
-        console.log("Message added with ID:", docRef.id);
-
-        setEmail("");
-        setName("");
-        setMessage("");
-        setIsFormSubmitted(true);
-        setIsLoading(false);
+        );       
       } catch (error) {
         setError(error);
         setIsFormSubmitted(true);
         setIsLoading(false);
         console.error("Error adding message:", error);
       }
+      setEmail("");
+        setName("");
+        setMessage("");
+        setIsFormSubmitted(true);
+        setIsLoading(false);
     };
     addMessageToFirestore({
       name: name,
@@ -245,9 +244,9 @@ const Contact = () => {
                         fill="currentColor"
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                          clip-rule="evenodd"
+                          clipRule="evenodd"
                         ></path>
                       </svg>
                     ) : (
