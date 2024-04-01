@@ -73,10 +73,10 @@ const About = () => {
           <time className="mb-1 text-sm font-normal leading-none text-gray-400 ">
             Present
           </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-white">
             Continuos Learning with freelancing projects
           </h3>
-          <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+          <p className="mb-4 text-base font-normal text-gray-400">
           Continuing from Citynect, I delved into Vue.js and Laravel, crafting several projects. Despite challenges, I began freelancing, though success hasn't fully materialized yet. But I'm committed and pushing forward.
           </p>
         </li>
@@ -85,10 +85,10 @@ const About = () => {
           <time className="mb-1 text-sm font-normal leading-none text-gray-400 ">
             July 2023
           </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-white">
             Product Development Internship
           </h3>
-          <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+          <p className="mb-4 text-base font-normal text-gray-400">
             In june 2023, I got the chance to create the product for the
             CITYNECT. I redesigned the existing app and added more creativity
             and functionality to it. It's currenlty serving at{" "}
@@ -106,10 +106,10 @@ const About = () => {
           <time className="mb-1 text-sm font-normal leading-none text-gray-400 ">
             January 2023
           </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-white">
             Full Stack Internship
           </h3>
-          <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+          <p className="mb-4 text-base font-normal text-gray-400">
             After my 1st internship I dived into Javascript frameworks (ReactJs,
             NextJs, ExpressJs). Soon I got 6 months Internship at Techno It Hub.
             I created APIs in ExpressJs and the admin panel in React js.
@@ -142,10 +142,10 @@ const About = () => {
           <time className="mb-1 text-sm font-normal leading-none text-gray-400 ">
             July 2022
           </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-white">
             First Internship
           </h3>
-          <p className="mb-4 text-base font-normal text-gray-500 dark:text-gray-400">
+          <p className="mb-4 text-base font-normal text-gray-400">
             After Learning basics ( HTML,CSS & Javascript ). I got my first
             Internship at intership studio where I designed the E-Commerse
             website.
@@ -175,26 +175,26 @@ const About = () => {
         </li>
         <li className="mb-10 ms-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          <time className="mb-1 text-sm font-normal leading-none text-gray-500">
             March 2021
           </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-white">
             Started Learning Web Developement
           </h3>
-          <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+          <p className="text-base font-normal text-gray-400">
             During my second year of college I started learning web development
             from the Internet.
           </p>
         </li>
         <li className="ms-4">
           <div className="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white "></div>
-          <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
+          <time className="mb-1 text-sm font-normal leading-none text-gray-500">
             September 2020
           </time>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+          <h3 className="text-lg font-semibold text-white">
             L.D.C.E. (Electronics & Communication)
           </h3>
-          <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+          <p className="text-base font-normal text-gray-400">
             Starting my engineering in electronics and communication at L.D.
             College of engineering Ahemdabad
           </p>
