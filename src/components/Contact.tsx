@@ -75,9 +75,9 @@ const Contact = () => {
               {!isFormSubmitted ? (
                 <form
                   className="w-full"
-                  onSubmit={(e) => {
-                    handleSubmit(e);
-                  }}
+                  // onSubmit={(e) => {
+                  //   handleSubmit(e);
+                  // }}
                   action="https://formsubmit.co/cbhanderi666@gmail.com"
                   method="POST"
                 >
