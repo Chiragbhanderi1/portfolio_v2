@@ -25,14 +25,13 @@ const Contact = () => {
     const app = initializeApp(firebaseConfig);
     const firestore = getFirestore(app);
 
-     
     // Function to add a message to Firestore
-    const addMessageToFirestore = async (messageData:any) => {
+    const addMessageToFirestore = async (messageData: any) => {
       try {
         const docRef = await addDoc(
           collection(firestore, "messages"),
           messageData
-        );       
+        );
       } catch (error) {
         setError(error);
         setIsFormSubmitted(true);
@@ -40,10 +39,10 @@ const Contact = () => {
         console.error("Error adding message:", error);
       }
       setEmail("");
-        setName("");
-        setMessage("");
-        setIsFormSubmitted(true);
-        setIsLoading(false);
+      setName("");
+      setMessage("");
+      setIsFormSubmitted(true);
+      setIsLoading(false);
     };
     addMessageToFirestore({
       name: name,
@@ -79,6 +78,8 @@ const Contact = () => {
                   onSubmit={(e) => {
                     handleSubmit(e);
                   }}
+                  action="https://formsubmit.co/cbhanderi666@gmail.com"
+                  method="POST"
                 >
                   <div className="mb-6">
                     <div className="relative flex justify-start">
@@ -281,10 +282,12 @@ const Contact = () => {
                       </svg>
                     )}
                     <h2 className="text-2xl font-bold py-4 text-gray-900">
-                      {!error?"Success":"Error"}
+                      {!error ? "Success" : "Error"}
                     </h2>
                     <p className="text-lg text-gray-500 px-2">
-                     {!error?"Thankyou for sending the feedback will surely work on to that.":error}
+                      {!error
+                        ? "Thankyou for sending the feedback will surely work on to that."
+                        : error}
                     </p>
                   </div>
                   <div className="p-2 mt-2 text-center space-x-1 md:block">
@@ -292,9 +295,13 @@ const Contact = () => {
                       onClick={() => {
                         setIsFormSubmitted(false);
                       }}
-                      className={`${!error ?"bg-green-400 hover:bg-green-500":"bg-red-400 hover:bg-red-500"} px-5 ml-4 py-2 text-md shadow-sm hover:shadow-lg font-bold tracking-wider border-2 border-green-300 hover:border-green-500 text-white rounded-full transition ease-in duration-300`}
+                      className={`${
+                        !error
+                          ? "bg-green-400 hover:bg-green-500"
+                          : "bg-red-400 hover:bg-red-500"
+                      } px-5 ml-4 py-2 text-md shadow-sm hover:shadow-lg font-bold tracking-wider border-2 border-green-300 hover:border-green-500 text-white rounded-full transition ease-in duration-300`}
                     >
-                     {!error?" Submit another response":"Try again"}
+                      {!error ? " Submit another response" : "Try again"}
                     </button>
                   </div>
                 </div>
@@ -317,5 +324,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
-
